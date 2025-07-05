@@ -8,7 +8,10 @@ import routes from "./routes/index.js";
 
 // CORS configurations
 const corsOptions = {
-    origin: "http://localhost:5173",
+    origin: [
+      "http://localhost:5173",
+      "https://local-business-dashboard-frontend-7j12owu73.vercel.app"
+    ],
     methods: ["GET", "POST", "DELETE", "PUT", "PATCH", "HEAD"],
     credentials: true,
     allowedHeaders: ["Content-Type", "Authorization"]
