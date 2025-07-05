@@ -8,13 +8,14 @@ import routes from "./routes/index.js";
 
 // CORS configurations
 const corsOptions = {
-    origin: [
-      "http://localhost:5173",
-      "https://local-business-dashboard-frontend-7j12owu73.vercel.app"
-    ],
-    methods: ["GET", "POST", "DELETE", "PUT", "PATCH", "HEAD"],
-    credentials: true,
-    allowedHeaders: ["Content-Type", "Authorization"]
+  origin: [
+    "http://localhost:5173",
+    "https://local-business-dashboard-frontend.vercel.app",
+    "https://local-business-dashboard-frontend-7j12owu73.vercel.app" // Incase
+  ],
+  methods: ["GET", "POST", "DELETE", "PUT", "PATCH", "HEAD"],
+  credentials: true,
+  allowedHeaders: ["Content-Type", "Authorization"]
 };
 
 // Middleware
@@ -26,7 +27,7 @@ app.use("/api", routes);
 
 // Health check endpoint
 app.get("/", (req, res) => {
-    res.send("Business Dashboard Server is up and running!");
+  res.send("Business Dashboard Server is up and running!");
 });
 
 // 404 route handler
